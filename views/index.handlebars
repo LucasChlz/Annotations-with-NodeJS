@@ -1,21 +1,13 @@
 <style>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html, body {
     height: 100%;
+    overflow: hidden;
 
 }
 
 .bg {
-    background-image: url('./img/background.jpg');
-    background-size: 100% 100%;
+    background-color: black;
     height: 100%;
-    background-repeat: no-repeat;
-    margin: 0 auto;
 }
 
 .cardT {
@@ -28,15 +20,16 @@ html, body {
   }
 </style>
 <div class="bg">
-<div class="container">>
-    <div class="card cardT mt-4">
+<div class="container">
+     {{>_msg}}
+    <div class="card cardT">
         <div style="text-align: center;" class="card-body">
             <h1>Welcome to the web notebook</h1>
             <hr>
             <p>Want to create a new note?</p>
             <br>
             <a href="/new"><button class="btn btn-success">Create Note</button></a>
-            <a href=""><button class="btn btn-info">View Notes</button></a>
+            <a href="/list"><button class="btn btn-info">View Notes</button></a>
         </div>
     </div>
 </div>

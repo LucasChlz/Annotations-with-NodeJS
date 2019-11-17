@@ -1,0 +1,65 @@
+<style>
+    .over {
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 700px;
+        height: 550px;
+        margin: 0 auto;
+    }
+
+    html, body {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .bg {
+    background-color: black;
+    height: 100%;
+    }
+
+    .cardT {
+        width: 700px;
+    }
+
+    @media screen and (max-width: 770px){
+        .cardT {
+            width: 300px;
+        }
+        .over {
+            width: 300px;
+        }
+        html, body {
+            overflow-y:auto;
+        }
+        .bg {
+            height: calc(100% + 200px);
+        }
+    }
+
+</style>
+
+<div class="bg">
+<h2 style="text-align: center;color: white;position: relative;top: 10px;">Note List</h2>
+<div class="container">
+<div class="over">
+{{>_msg}}
+{{#each notes}}
+    <div class="card cardT">
+        <div class="card-body">
+        <h4>{{title}}</h4>
+        <p>Description: {{description}}</p>
+        <small>Date - {{date}}</small>
+            <a href="/note/view/{{slug}}"><button class="btn btn-success">Open It</button></a>
+            <a href="/note/view/edit{{_id}}"><button style="background-color:black;color:white;" class="btn">Edit note</button></a>
+        <form style="display:inline-block" action="/list/delete" method="POST">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button type="submit" class="btn btn-danger">Delete note</button>
+        </form>
+        </div>
+    </div>
+{{else}}
+ <h1>No notes registered</h1>
+{{/each}}
+</div>
+</div>
+</div>
