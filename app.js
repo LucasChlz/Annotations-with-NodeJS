@@ -1,4 +1,4 @@
-// MODULE
+// MODULES
 const express = require("express")
 const handlebars = require("express-handlebars")
 const mongoose = require("mongoose")
@@ -29,6 +29,13 @@ const path = require("path")
         app.get('/', (req, res) => {
             res.render("index")
         })
+
+        app.get('/new', (req, res) => {
+            res.render("notes/newnotes")
+        })
+
+        
+
     // Connect Server
         const PORT = process.env.PORT || 8020
         app.listen(PORT, () => {
