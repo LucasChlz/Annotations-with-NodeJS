@@ -1,10 +1,24 @@
 <style>
+    html, body {
+        height: 100%;
+        overflow: hidden;
+    }
+
     .bg{
         background-color: black;
         color: white;
+        height: 93%;
+    }
+    .over {
+    overflow-y: auto;
+    overflow-x: auto;
+    width: 700px;
+    height: 550px;
+    margin: 0 auto;
     }
 </style>
 <div class="bg">
+<div class="over">
 <div class="container bg">
     <div class="card bg">
         <div class="card-body">
@@ -16,5 +30,6 @@
             {{notes.content}}
         </div>
     </div>
+</div>
 </div>
 </div>
