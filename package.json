@@ -1,0 +1,25 @@
+{
+  "name": "Notebook-NodeJS",
+  "version": "1.0.0",
+  "description": "Notebook with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasChlz/Annotations-with-NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasChlz/Annotations-with-NodeJS/issues"
+  },
+  "homepage": "https://github.com/LucasChlz/Annotations-with-NodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0"
+  }
+}
